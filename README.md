@@ -1,6 +1,31 @@
+<p align="center"><img src="docs/social-preview.png" alt="CSV Cleaner: command-line tool that tidies messy CSV files" width="100%"></p>
+
 # CSV Cleaner
 
-A small command-line tool written in Python that tidies messy CSV files. It uses only the Python standard library, so there is nothing to install.
+<p>
+<img src="https://img.shields.io/badge/Python-3.8%2B-14B8A6?style=flat-square&logo=python&logoColor=14B8A6&labelColor=0B1F3A" alt="Python 3.8+">
+<img src="https://img.shields.io/badge/dependencies-none-14B8A6?style=flat-square&labelColor=0B1F3A" alt="No dependencies">
+<img src="https://img.shields.io/badge/tests-13%20passing-14B8A6?style=flat-square&labelColor=0B1F3A" alt="13 tests passing">
+<img src="https://img.shields.io/badge/license-MIT-F59E0B?style=flat-square&labelColor=0B1F3A" alt="MIT license">
+</p>
+
+A small command-line tool written in Python that tidies messy CSV files: it fixes headers, trims cells, removes duplicates and reports what it changed. It uses only the Python standard library, so there is nothing to install.
+
+> This is a command-line tool, so there is no GitHub Pages demo. Clone the repo and run it in about 10 seconds (see **Usage**).
+
+## Demo
+
+```text
+$ python csv_cleaner.py sample_messy.csv
+Rows read:               8
+Empty rows removed:      1
+Duplicates removed:      2
+Malformed rows skipped:  1
+Rows written:            4
+Saved to: sample_messy_clean.csv
+```
+
+<!-- Optional: record the terminal with asciinema or a GIF and save it as docs/demo.gif -->
 
 ## What it does
 
@@ -62,6 +87,16 @@ The tests in `test_csv_cleaner.py` cover headers, cell cleaning, duplicates, sho
 | `test_csv_cleaner.py` | Automated tests |
 | `sample_messy.csv` | Made-up sample data to try it on |
 
+## What I learned
+
+- Writing a clean CLI with `argparse`, with helpful errors and exit codes.
+- Handling real-world CSV problems: byte-order marks, ragged rows and placeholder values.
+- Test-driven fixes with `unittest`, covering edge cases before changing behaviour.
+
 ## License
 
-MIT. See the `LICENSE` file.
+MIT. See [`LICENSE`](LICENSE).
+
+---
+
+Built by [Samer Monzer](https://github.com/GrandMaster-samer) · [LinkedIn](https://www.linkedin.com/in/samer-monzer-51266727a)
